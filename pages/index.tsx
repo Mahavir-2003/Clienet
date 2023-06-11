@@ -1,9 +1,10 @@
+import Navbar from '@/components/Navbar'
 import Image from 'next/image'
 
 export default function Home() {
   return (
     <>
-    <p> Hello There Welcome</p>
+     <Navbar />
     </>
   )
 }
