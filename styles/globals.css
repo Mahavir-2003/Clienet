@@ -10,6 +10,14 @@ font-family: 'Plus Jakarta Sans', sans-serif; */
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #fff ;
+}
+
 .link{
     display: inline-flex;
     flex-direction: column;

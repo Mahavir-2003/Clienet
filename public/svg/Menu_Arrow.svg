@@ -1,13 +1,11 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_116_10)">
-<path d="M32 39.6981V24.7881" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M27.0508 28.457L31.9998 24.302" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M32 24.302L36.951 28.457" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M32 62.75C48.9828 62.75 62.75 48.9828 62.75 32C62.75 15.0172 48.9828 1.25 32 1.25C15.0172 1.25 1.25 15.0172 1.25 32C1.25 48.9828 15.0172 62.75 32 62.75Z" stroke="black" stroke-opacity="0.5" stroke-width="2.5"/>
-</g>
-<defs>
-<clipPath id="clip0_116_10">
-<rect width="64" height="64" fill="white"/>
-</clipPath>
-</defs>
-</svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <g id="Group_1" data-name="Group 1" transform="translate(-152 -439)">
+    <line id="Line_1" data-name="Line 1" y1="14.91" transform="translate(184 463.788)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    <path id="Path_1" data-name="Path 1" d="M6,9.155,10.949,5" transform="translate(173.051 458.302)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    <path id="Path_2" data-name="Path 2" d="M10.949,5,15.9,9.155" transform="translate(173.051 458.302)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(152 439)" fill="none" stroke="rgba(0,0,0,0.2)" stroke-width="2.5">
+      <circle cx="32" cy="32" r="32" stroke="none"/>
+      <circle id="circle" cx="32" cy="32" r="30.75" fill="none"/>
+    </g>
+  </g>
+</svg>  
