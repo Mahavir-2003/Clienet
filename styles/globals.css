@@ -39,3 +39,8 @@ body{
 .link:hover::after{
     width: 100%;
 }
+
+[data-name="circle"]{
+    stroke-dashoffset: 0;
+    stroke-dasharray: 97;
+}

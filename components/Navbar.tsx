@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 import Menu from "./Menu";
 import { gsap } from "gsap";
+import MenuArrow from "../public/svg/Menu_Arrow.svg";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,24 +12,28 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    let tl = gsap.timeline();
+  const tl = gsap.timeline();
 
-    if (isMenuOpen) {
-      tl.to(".menu", {
-        duration: 0.7,
-        height: "100vh",
-        ease: "expo.inOut",
-        position: "fixed",
-      })
-    } else {
-      tl.to(".menu", {
-        duration: 0.7,
-        height: "0vh",
-        ease: "expo.inOut",
-        position: "relative",
-      });
-    }
-  }, [isMenuOpen]);
+  const animationDuration = 1;
+  const easing = "expo.inOut";
+  const circleAnimation = {
+    duration: animationDuration,
+    delay: -animationDuration,
+    ease: easing,
+    css: {
+      strokeDashoffset: isMenuOpen ? -97 : 0,
+      strokeDasharray: 97,
+    },
+  };
+
+  tl.to(".menu", {
+    duration: animationDuration,
+    height: isMenuOpen ? "100vh" : "0vh",
+    ease: easing,
+    position: isMenuOpen ? "absolute" : "relative",
+  }).to('[data-name="circle"]', circleAnimation);
+}, [isMenuOpen]);
+
 
   return (
     <header className="w-full h-auto  top-0 left-0">
@@ -40,7 +45,10 @@ const Navbar = () => {
             </p>
           </span>
           <span className="Menu-icon">
-            <Image src="/svg/Menu_Arrow.svg" alt="menu" width={40} height={40} className="w-10 sm:w-14 hover:cursor-pointer" onClick={toggleMenu} />
+            <MenuArrow
+              className="w-10 rotate-180 sm:w-14 hover:cursor-pointer"
+              onClick={toggleMenu}
+            />
           </span>
         </div>
         <Menu />

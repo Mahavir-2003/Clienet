@@ -4,7 +4,7 @@ import Link from "next/link";
 const Menu = () => {
   return (
     <>
-        <div className="menu w-full h-0 bg-bright-yellow overflow-hidden flex justify-center">
+        <div className="menu w-full h-0 bg-light-green overflow-hidden flex justify-center">
           <div className="menu-container mt-10 md:mt-0 xl:justify-around xl:w-9/12 xl:-mt-10  w-9/12 h-full flex justify-center gap-y-14 lg:items-center lg:w-11/12 lg:gap-x-16 lg:mt-5 items-start flex-col lg:flex-row">
             <div className="menu-items select-none">
                 <span><h1 className=" font-secondary font-light text-lg md:text-2xl md:mb-8 lg:text-xl 2xl:font-normal 2xl:mb-10
