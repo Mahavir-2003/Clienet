@@ -14,7 +14,7 @@ const Navbar = () => {
   useEffect(() => {
   const tl = gsap.timeline();
 
-  const animationDuration = 1;
+  const animationDuration = 0.8;
   const easing = "expo.inOut";
   const circleAnimation = {
     duration: animationDuration,
@@ -25,7 +25,6 @@ const Navbar = () => {
       strokeDasharray: 97,
     },
   };
-
   tl.to(".menu", {
     duration: animationDuration,
     height: isMenuOpen ? "100vh" : "0vh",
@@ -51,7 +50,7 @@ const Navbar = () => {
             />
           </span>
         </div>
-        <Menu />
+        <Menu toggleMenu={toggleMenu}/>
       </nav>
     </header>
   );
