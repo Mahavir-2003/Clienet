@@ -4,7 +4,7 @@ import React from 'react'
 const about = () => {
   return (
     <>
-    <div>about</div>
+    <div className=' h-screen w-screen bg-primary-dark'>about</div>
     </>
   )
 }
