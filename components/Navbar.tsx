@@ -54,8 +54,25 @@ const Navbar: React.FC = () => {
     };
   }, [isMenuOpen]);
 
+  // to animate navbar on initial load
+  useEffect(() => {
+    const timeline = gsap.timeline();
+    timeline
+      .from(".nav-container", {
+        duration: 0.8,
+        opacity: 0,
+        ease: "expo.inOut",
+      })
+
+    // Cleanup the timeline when the component unmounts
+    return () => {
+      timeline.kill();
+    };
+  }
+  , []);
+
   return (
-    <header className="w-full h-auto top-0 left-0">
+    <header className="nav-container absolute w-full h-auto top-0 left-0">
       <nav className="bg-black w-full h-auto flex justify-center items-start relative">
         <div className="navbar z-40 absolute top-0 flex justify-between items-center w-11/12 sm:w-10/12 w- pt-5 lg:pt-8">
           <span className="logo">

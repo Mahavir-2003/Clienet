@@ -66,7 +66,9 @@ const Intro: React.FC = () => {
   }, [currentWordIndex]);
 
   return (
-    <div className="w-screen h-screen relative bg-primary-dark flex justify-center">
+    <div className="w-screen h-screen relative -z-20 bg-primary-dark flex justify-center items-center">
+      <div className="width-change absolute w-2/3 h-1/3 -z-10 bg-blue-700"></div>
+      <div  style={{backdropFilter : "blur(200px)"}}  className="w-full h-full flex justify-center items-center">
       <div className="h-full w-11/12 sm:w-10/12 flex flex-col justify-end items-start text-white pb-10 gap-y-4 px-4 sm:px-0">
         <div className="intro-lines pb-28 text-5xl md:text-8xl font-semibold font-primary  sm:gap-y-8 lg:text-8xl xl:text-9xl flex flex-col tracking-wide overflow-hidden">
           <h1 className="overflow-hidden">
@@ -94,6 +96,7 @@ const Intro: React.FC = () => {
             <p className="text-base sm:text-2xl">LAST UPDATE 10TH FEBRUARY</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

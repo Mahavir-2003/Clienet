@@ -1,53 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap");
 /* font-family: 'Inter', sans-serif;
 font-family: 'Plus Jakarta Sans', sans-serif; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-    background-color: #fff ;
-    width: 100vw;
+/*create css animation to expend and contract width and change background with hue*/
+@keyframes width {
+  0% {
+    width: 20%;
+    right: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 60%;
+    right: 25%;
+    opacity: 0.8;
+  }
 }
 
-body::-webkit-scrollbar{
-    width: 0px;
+.width-change {
+  animation: width 3.2s ease infinite alternate;
 }
 
-
-.link{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: end;
+body {
+  background-color: #fff;
+  width: 100vw;
 }
 
-.link:hover{
-    align-items: start;
+body::-webkit-scrollbar {
+  width: 0px;
 }
 
-.link::after{
-    content: '';
-    width: 0;
-    height: 2px;
-    background: #000;
-    transition: width 0.4s;
+.link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: end;
 }
 
-
-.link:hover::after{
-    width: 100%;
+.link:hover {
+  align-items: start;
 }
 
-[data-name="circle"]{
-    stroke-dashoffset: 0;
-    stroke-dasharray: 97;
+.link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.4s;
 }
+
+.link:hover::after {
+  width: 100%;
+}
+
+[data-name="circle"] {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 97;
+}
+
+.para-container p {
+    background: linear-gradient(
+      to right,
+      rgb(255, 255, 255) 50%,
+      rgb(37, 37, 37) 50%
+    );
+    rotate: -5deg;
+    font-style: italic;
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  }
+  

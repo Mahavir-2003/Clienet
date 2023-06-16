@@ -46,6 +46,7 @@ const PageTransition: React.FC = () => {
     return () => {
       router.events.off('routeChangeStart', handleRouteChange);
     };
+    
   }, []);
 
   return (
