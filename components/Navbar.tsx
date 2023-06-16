@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
   return (
     <header className="w-full h-auto top-0 left-0">
       <nav className="bg-black w-full h-auto flex justify-center items-start relative">
-        <div className="navbar z-40 absolute top-0 flex justify-between items-center w-11/12 sm:w-9/12 pt-5 lg:pt-8">
+        <div className="navbar z-40 absolute top-0 flex justify-between items-center w-11/12 sm:w-10/12 w- pt-5 lg:pt-8">
           <span className="logo">
             <p className="logo-name text-white font-primary text-sm sm:text-2xl font-semibold tracking-widest">
               CLIENET.

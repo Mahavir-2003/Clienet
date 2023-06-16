@@ -10,13 +10,13 @@ font-family: 'Plus Jakarta Sans', sans-serif; */
     padding: 0;
 }
 
-
 html{
     scroll-behavior: smooth;
 }
 
 body{
     background-color: #fff ;
+    width: 100vw;
 }
 
 body::-webkit-scrollbar{
