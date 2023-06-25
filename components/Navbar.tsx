@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
           </span>
           <span className="Menu-icon">
             <MenuArrow
-              className="menu-arrow w-10 stroke-white stroke-2 rotate-180 sm:w-14 hover:cursor-pointer"
+              className="menu-arrow w-10 stroke-white stroke-2 rotate-180 sm:w-14 "
               onClick={toggleMenu}
             />
           </span>
