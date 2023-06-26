@@ -36,14 +36,13 @@ const TextReveal: React.FC = () => {
 
   return (
     <div
-      className="w-screen min-h-screen bg-primary-dark flex justify-center items-end "
-      style={{padding : "25% 0%"}}
+      className="w-screen min-h-screen bg-primary-dark flex justify-center items-end relative"
     >
       <div className="para-container w-screen h-screen text-primary-light text-xl font-bold font-secondary sm:text-4xl sm:gap-y-8 lg:text-5xl xl:text-6xl 2xl:text-7xl xl:pt-72 xl:pb-72 gap-y-4 flex flex-col justify-center items-center">
         {/* Render the paragraphs */}
         {paragraph.split(";").map((item, index) => (
           <React.Fragment key={index}>
-            <p>{item.trim()}</p>
+            <p className="paragraph">{item.trim()}</p>
           </React.Fragment>
         ))}
       </div>

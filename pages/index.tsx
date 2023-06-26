@@ -1,3 +1,4 @@
+import ImageIntro from "@/components/HomePage/ImageIntro";
 import Intro from "@/components/HomePage/Intro";
 import ProjectsShowcase from "@/components/HomePage/ProjectsShowcase";
 import TextReveal from "@/components/HomePage/TextReveal";
@@ -8,8 +9,11 @@ export default function Home() {
     <>
      <Intro />
      <TextReveal />
-     {/* <TunnelAnimation /> */}
      <ProjectsShowcase />
+     {/* don't remove the below element from the div otherwise it will cause RemoveChild error while switching routes */}
+     <div key="video_intro"><ImageIntro /></div>  
+
+     {/* <TunnelAnimation /> */}
      <div className="w-screen h-screen bg-primary-dark"></div>
     </>
   )

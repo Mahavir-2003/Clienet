@@ -44,8 +44,10 @@ html {
 }
 
 .cursor-text{
+  width: 50%;
+  text-align: center;
   font-size: 25px;
-  font-weight: 700;
+  font-weight: 600;
   color: #000;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -73,7 +75,7 @@ html {
 }
 
 body {
-  background-color: #fff;
+  background-color: #1f1f1f;
   width: 100vw;
   cursor: none;
 }
@@ -135,7 +137,7 @@ img{
   width: 100% !important;
   height: 100% !important;
   object-position: center;
-  object-fit:fill  ;
+  object-fit: cover;
   transform: scale(1);
   filter: grayscale(100%);
   transition: all 0.4s ease-in-out;
@@ -145,5 +147,91 @@ img{
   transform: scale(1.1);
   filter: grayscale(0%);
 }
+
+.project-container{
+  width: 450px;
+  aspect-ratio: 9/12;
+  height: auto;
+  overflow: hidden;
+}
+
+
+.intro-video{
+  width: 60%;
+  height: 60%;
+  vertical-align: middle;
+}
+
+
+/*media query for range below 640px*/
+@media (max-width: 640px) {
+
+  .project-container{
+    width: 300px;
+    aspect-ratio: 9/12;
+    height: auto;
+  }
+
+  .responsiveImage{
+    filter : grayscale(0%);
+  }
+
+  .intro-video{
+    width: 0%;
+    height: 90%;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
+
+  .project-container{
+    width: 400px;
+    aspect-ratio: 9/12;
+    height: auto;
+  }
+
+  .responsiveImage{
+    filter : grayscale(0%);
+  }
+
+  .intro-video{
+    width: 0%;
+    height: 90%;
+    vertical-align: middle;
+  }
+}
+
+/*media query for range between 768px and 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .project-container{
+    width: 400px;
+    aspect-ratio: 9/12;
+    height: auto;
+  }
+
+  .responsiveImage{
+    filter : grayscale(0%);
+  }
+
+  .intro-video{
+    width: 0%;
+    height: 90%;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+  .project-container{
+    width: 400px;
+    aspect-ratio: 9/12;
+    height: auto;
+  }
+}
+
+
+
 
 
