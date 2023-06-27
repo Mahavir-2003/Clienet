@@ -57,37 +57,46 @@ const ProjectsShowcase: React.FC = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const container = containerRef.current;
-
       const tl = gsap.timeline();
-      tl.to(".project-heading-one", {
-        opacity: 1,
+      const t1 = gsap.timeline({
         scrollTrigger: {
           trigger: container,
           scrub: 1.6,
-          start: "top top",
+          start: "top",
           end: "bottom bottom",
+        },
+      });
+      const t2 = gsap.timeline();
+
+      tl.to(".project-heading-two", {
+        x: "30%",
+        scrollTrigger: {
+          trigger: container,
+          scrub: 1.6,
+          start: "top",
+          end: "bottom",
           pin: ".project-heading-container",
           pinSpacing: true,
         },
         ease: "power2.out",
-      }).to(".project-heading-two", {
-        x: "30%",
+      })
+      
+      t1.to(".project-header", {
         opacity: 1,
-        scrollTrigger: {
-          trigger: container,
-          scrub: 1.6,
-          start: "top top",
-          end: "bottom bottom",
-        },
         ease: "power2.out",
-      }).to(".left", {
+      }).to(".project-header", {
+        opacity: 0,
+        ease: "power2.out",
+      })
+      
+      t2.to(".left", {
         x: "5%",
         stagger: 0.2,
         scrollTrigger: {
           trigger: container,
           scrub: 1.6,
-          start: "top center",
-          end: "bottom center",
+          start: "top",
+          end: "bottom",
         },
       }).to(".right", {
         x: "-5%",
@@ -95,15 +104,15 @@ const ProjectsShowcase: React.FC = () => {
         scrollTrigger: {
           trigger: container,
           scrub: 1.6,
-          start: "top center",
-          end: "bottom center",
+          start: "top",
+          end: "bottom",
         },
       }).play();
 
       return () => {
-        if (tl) {
-          tl.kill();
-        }
+        if(tl) tl.kill();
+        if(t1) t1.kill();
+        if(t2) t2.kill();
       };
     }
   }, []);
@@ -120,8 +129,8 @@ const ProjectsShowcase: React.FC = () => {
         ))}
       </div>
       <div className="project-heading-container z-0 absolute top-0 left-0 w-full h-screen text-white text-4xl md:text-7xl flex justify-center items-center flex-col tracking-wide">
-        <p className="project-heading-one opacity-0">Selected</p>
-        <p className="project-heading-two pl-20 opacity-0">Projects</p>
+        <p className="project-heading-one project-header opacity-0">Selected</p>
+        <p className="project-heading-two pl-20 project-header opacity-0">Projects</p>
       </div>
     </div>
   );

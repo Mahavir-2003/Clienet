@@ -6,19 +6,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ImageIntro: React.FC= () => {
   useEffect(() => {
-    const tl = gsap.timeline();
-    tl.to(".intro-video", {
-      width: "100%",
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".image-container",
-        scrub: 1,
+        scrub: 1.6,
         pin: true,
         start: "top",
         end: "+=3000",
         pinSpacing: true,
       },
-      ease: "power2.out",
     });
+    tl.to(".intro-video", {
+      width: "100%",
+      ease: "power2.out",
+    })
+    .to(".intro-video", {
+      width: "0%",
+      ease: "power2.out",
+      })
 
     return () => {
       tl.kill();

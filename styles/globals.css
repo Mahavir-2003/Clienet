@@ -162,6 +162,27 @@ img{
   vertical-align: middle;
 }
 
+.services-container div{
+  border-top: 1px solid #fff;
+  padding: 8% 0%;
+}
+
+
+.services-marquee{
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+  max-height: 100%;
+  font-size: 300px;
+  font-weight: 600;
+  font-style: italic;
+  position: relative;
+}
+
 
 /*media query for range below 640px*/
 @media (max-width: 640px) {
@@ -180,6 +201,15 @@ img{
     width: 0%;
     height: 90%;
     vertical-align: middle;
+  }
+
+  .custom-cursor{
+    display: none;
+  }
+
+  .services-marquee{
+    font-size: 80px;
+    padding-top: 10%;
   }
 }
 
@@ -200,6 +230,13 @@ img{
     height: 90%;
     vertical-align: middle;
   }
+  .custom-cursor{
+    display: none;
+  }
+
+  .services-marquee{
+    font-size: 130px;
+  }
 }
 
 /*media query for range between 768px and 1024px*/
@@ -219,6 +256,9 @@ img{
     width: 0%;
     height: 90%;
     vertical-align: middle;
+  }
+  .services-marquee{
+    font-size: 160px;
   }
 }
 
