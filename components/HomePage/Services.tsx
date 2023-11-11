@@ -35,7 +35,7 @@ const Services = () => {
     },[]);
 
   return (
-    <div ref={servicesContainer} className='w-screen flex justify-center flex-col items-center'>
+    <div ref={servicesContainer} className='w-screen flex justify-center flex-col items-center bg-primary-dark'>
         <div className='w-10/12 flex justify-center flex-col text-primary-light tracking-wider gap-y-20'>
             <div className="services-header-container w-full text-4xl md:text-7xl font-semibold flex flex-col gap-y-4 overflow-hidden">
                 <h1 className="services-header-one">What exactly</h1>

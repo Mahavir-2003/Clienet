@@ -8,11 +8,12 @@ const Cursor = () => {
 
   useEffect(() => {
     const cursor = document.getElementById("custom-cursor");
-    const links = document.querySelectorAll(".link");
+    const links = document.querySelectorAll("ul .link");
 
     const cursorTextContainer = document.querySelectorAll(
       ".cursor-text-container"
     );
+
     const cursorText = document.querySelectorAll(".cursor-text");
 
     if (path === "/") {
@@ -86,6 +87,22 @@ const Cursor = () => {
       gsap.to(cursor, { x: clientX, y: clientY, duration: 0 });
     };
     document.addEventListener("mousemove", onMouseMove);
+
+    const cursorReset = () => {
+      gsap.to(cursor, {
+        width: "20px",
+        height: "20px",
+        backgroundColor: "transparent",
+        backdropFilter: "blur(0px)",
+        mixBlendMode: "difference",
+        border: "2px solid #fff",
+        ease: "power2.out",
+      });
+      cursorText[0].innerHTML = "View";
+      gsap.set(cursorTextContainer, { display: "none" });
+    };
+
+    cursorReset();
 
     //links
     links.forEach((link) => {
